@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 
 const prefix =
-  process.env.NODE_ENV === 'production' ? 'https://jongwoobae.github.io/ticketing-example/' : ''
+  process.env.NODE_ENV === "production"
+    ? "https://jongwoobae.github.io/ticketing-example/"
+    : "";
 
 const nextConfig = {
-  output: 'export',
+  output: "export",
   assetPrefix: prefix,
   reactStrictMode: false,
   async headers() {
