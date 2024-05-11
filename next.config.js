@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+const prefix =
+  process.env.NODE_ENV === 'production' ? 'https://jongwoobae.github.io/ticketing-example/' : ''
+
 const nextConfig = {
+  output: 'export',
+  assetPrefix: prefix,
   reactStrictMode: false,
   async headers() {
     return [
